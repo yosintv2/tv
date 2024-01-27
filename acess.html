@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access Denied</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    h1 {
+      color: #ff0000;
+    }
+  </style>
+  <script>
+    // JavaScript to check if the screen width is less than a certain value (indicating a mobile device)
+    window.onload = function () {
+      if (window.innerWidth <= 800) {
+        document.getElementById("accessDenied").style.display = "block";
+      }
+    };
+  </script>
+</head>
+<body>
+  <div id="accessDenied" style="display: none;">
+    <h1>Access Denied</h1>
+    <p>Please open this page from a mobile device.</p>
+  </div>
+</body>
+</html>
