@@ -1,0 +1,36 @@
+<div id="popupIframe">
+    <iframe frameborder="0" id="iframe"></iframe>
+  </div>
+<script>
+    var urls = [
+
+      ' _________ ',
+
+    ];
+    var currentIndex = 0;
+    var displayTimer;
+    function startDisplay() {
+      var popupIframe = document.getElementById('popupIframe');
+      popupIframe.style.display = 'block';
+      popupIframe.classList.add('active');
+      loadNextUrl();
+      displayTimer = setInterval(function() {
+        loadNextUrl();
+      }, 30000);
+    }
+    function loadNextUrl() {
+      if (currentIndex < urls.length) {
+        var iframe = document.getElementById('iframe');
+        iframe.src = urls[currentIndex];
+        currentIndex++;
+      } else {
+        var popupIframe = document.getElementById('popupIframe');
+        popupIframe.classList.remove('active');
+        setTimeout(function() {
+          popupIframe.style.display = 'none';
+          clearInterval(displayTimer);
+        }, 300);
+      }
+    }
+    startDisplay();
+  </script>
