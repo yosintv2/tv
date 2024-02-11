@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> PC User Detected </title>
+
+  <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://arvigorothan.com/tag.min.js',6304340,document.body||document.documentElement)</script>
+
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    h1 {
+      color: #ff0000;
+    }
+  </style>
+
+</head>
+<body>
+    <h1>Mobile User Detected !! </h1>
+    <p>Please open <b>Mobile Link</b> to Watch Live Stream.</p>
+  </div>
+</body>
+</html>
