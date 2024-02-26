@@ -6,8 +6,72 @@
 <title>Custom Video Player</title>
 </head>
 <body>
-<video allowfullscreen="yes" autoplay="0" controls="" frameborder="0" height="500px" id="video-player" marginheight="0" marginwidth="0" poster="https://blogger.googleusercontent.com/img/a/AVvXsEgPW62n3GieGxmfl3dOKSs0p1sb9AelxUi7A967d8L82NQYq68_tsDsUdsNXbWhrgy6P7xXQ6nmRlXt0JuyTQDRw5j68jafa3ZhnR_v5q52g41PTk0HcVAlTfcF3G5xr6k5ABqLJ-FZ85vGkK0ip3K7pNEBDQd0DVXv5frMMX0GqRDAo-LrbqFq-djhwuc=s313" scrolling="no" style="width: 100%;" type="application/x-mpegURL" width="100%"></video>
-<script>
+<video allowfullscreen="yes" autoplay="0" controls="" frameborder="0" height="100%" id="video-player" marginheight="0" marginwidth="0" poster="https://blogger.googleusercontent.com/img/a/AVvXsEgPW62n3GieGxmfl3dOKSs0p1sb9AelxUi7A967d8L82NQYq68_tsDsUdsNXbWhrgy6P7xXQ6nmRlXt0JuyTQDRw5j68jafa3ZhnR_v5q52g41PTk0HcVAlTfcF3G5xr6k5ABqLJ-FZ85vGkK0ip3K7pNEBDQd0DVXv5frMMX0GqRDAo-LrbqFq-djhwuc=s313" scrolling="no" style="width: 100%;" type="application/x-mpegURL" width="100%"></video>
+
+  <style>
+        #container {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          background: #8a0000;
+          color: #fff;
+          overflow: hidden;
+        }
+        #iframe, #jwPlayer {
+          height: 100vh !important;
+          padding: 0;
+          margin: 0;
+        }
+        body {
+          height: 100vh;
+          margin: 0;
+          padding: 0;
+        }
+        #container {
+          position: absolute;
+          text-align: center;
+        }
+        video {
+          outline: 0;
+        }
+        #text {
+          position: fixed;
+          border: 0;
+          left: 0;
+          width: 100%;
+          color: #fff;
+          bottom: 50px;
+          text-align: center;
+          font-family: tahoma;
+          font-size: 20px;
+          z-index: 9999;
+        }
+      </style>
+    </div>
+
+        
+
+    <style>
+        .video-js {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            text-align: center;
+            margin: 0px;
+        }
+        #videojs {
+            width: 100%;
+            height: 100%;
+        }.streaming-dimensions{
+                    width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+
+  
+  <script>
   // Get the customid from the URL parameter
   const urlParams = new URLSearchParams(window.location.search);
   const customid = urlParams.get('customid');
