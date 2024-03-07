@@ -1,0 +1,81 @@
+<style>
+html {
+	background-image: url('____');
+</style>  
+  
+
+
+<div class="countdown countdown-container container" style="text-align:center; color:#ffffff;">
+<div class="row">
+<div class="col-lg-10 col-md-10">
+  
+<h1><b>____ Countdown</b></h1>
+<h2 style="text-align:center; color:#FFFF00;"> How many days until ____ 2024?</h2>
+  
+<p class="before-emoji-padding holiday-date">
+<b class="ng-binding"> Date: Monday, March 25, 2024</b></p>
+<h2 style="text-align:center; color:#FFFF00;"> <b> Location: _____ </b></h2>
+  
+
+<b class="ng-binding"> Ticket: <a href="___"> Click Here</a>  </b>
+  
+</div>
+</div>
+  
+  
+<div class="row">
+<div class="col-lg-10 col-md-10 day">
+<div class="row ng-binding dd">
+00
+</div>
+<div class="row">
+days
+</div>
+</div>
+</div>
+<div class="row secondary-timers" style="margin-top:10px;">
+<div class="col-xs-4 col-md-2 col-md-offset-2">
+<div class="row ng-binding hh">
+00
+</div>
+<div class="row">
+hours
+</div>
+</div>
+<div class="col-xs-4 col-md-2">
+<div class="row ng-binding mm">
+00
+</div>
+<div class="row">
+minutes
+</div>
+</div>
+<div class="col-xs-4 col-md-2 ">
+<div class="row ng-binding ss">
+00
+</div>
+<div class="row">
+seconds
+</div>
+</div>
+</div>
+<div class="mobads">
+<br/>
+<br/>
+</div>
+</div>
+
+
+
+<script type="text/javascript">  
+    $('document').ready(function() {
+
+       $('.countdown').countdown('2024/___/___', function(event) {
+          $('.dd').html(event.strftime('%D'));
+          $('.hh').html(event.strftime('%H')); 
+          $('.mm').html(event.strftime('%M')); 
+          $('.ss').html(event.strftime('%S')); 
+       });
+
+    });
+</script>
