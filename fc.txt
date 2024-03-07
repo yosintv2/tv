@@ -17,7 +17,7 @@ html {
 <h2 style="text-align:center; color:#FFFF00;"> <b> Location: _____ </b></h2>
   
 
-<b class="ng-binding"> Ticket: <a href="___"> Click Here</a>  </b>
+<b class="ng-binding"> Ticket Available: <a href="___"> Click Here</a>  </b>
   
 </div>
 </div>
