@@ -13,7 +13,7 @@ html {
 <h2 style="text-align:center; color:#FFFF00;"> How many days until ____ 2024?</h2>
   
 <p class="before-emoji-padding holiday-date">
-<b class="ng-binding"> Date: Monday, March 25, 2024</b></p>
+<b class="ng-binding"> Date: _______ </b></p>
 <h2 style="text-align:center; color:#FFFF00;"> <b> Location: _____ </b></h2>
   
 
