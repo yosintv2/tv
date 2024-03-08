@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Link Generator</title>
+</head>
+<body>
+    <h1>Short Link Generator</h1>
+    <input type="text" id="longUrl" placeholder="Enter long URL">
+    <button onclick="generateShortLink()">Generate Short Link</button>
+    <div id="shortUrlContainer"></div>
+
+    <script>
+        const baseURL = 'https://your-shortening-service.com/'; // Replace this with your actual shortening service URL
+        let permalinks = {};
+
+        function generateShortLink() {
+            const longUrl = document.getElementById('longUrl').value;
+            if (!longUrl) {
+                alert('Please enter a valid URL');
+                return;
+            }
+
+            // Simulating the shortening process by generating a random short key
+            const shortKey = generateRandomKey();
+            const shortUrl = baseURL + shortKey;
+            permalinks[shortKey] = longUrl;
+
+            const shortUrlElement = document.createElement('p');
+            shortUrlElement.textContent = `Short URL: ${shortUrl}`;
+            document.getElementById('shortUrlContainer').appendChild(shortUrlElement);
+        }
+
+        function generateRandomKey() {
+            return Math.random().toString(36).substring(2, 8);
+        }
+
+        // This function is for demonstration purposes only
+        // In a real scenario, you would handle the short URL redirect on your server
+        function redirectToLongUrl(shortKey) {
+            const longUrl = permalinks[shortKey];
+            if (longUrl) {
+                window.location.href = longUrl;
+            } else {
+                alert('Permalink not found');
+            }
+        }
+    </script>
+</body>
+</html>
