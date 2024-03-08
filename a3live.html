@@ -1,40 +1,130 @@
+<style>
+        #container {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          background: #8a0000;
+          color: #fff;
+          overflow: hidden;
+        }
+        #video-playe, #jwPlayer {
+          height: 100vh !important;
+          padding: 0;
+          margin: 0;
+        }
+        body {
+          height: 100vh;
+          margin: 0;
+          padding: 0;
+        }
+        #container {
+          position: absolute;
+          text-align: center;
+        }
+        video {
+          outline: 0;
+        }
+        #text {
+          position: fixed;
+          border: 0;
+          left: 0;
+          width: 100%;
+          color: #fff;
+          bottom: 50px;
+          text-align: center;
+          font-family: tahoma;
+          font-size: 20px;
+          z-index: 9999;
+        }
+      </style>
+    </div>
 
- <div class="STingPlayerLite">
- <div class="NameSTingOnLive"></div> 
- <div class="NoLive" style="top:0;width: 100%;"></div>
+        
+
+    <style>
+        .video-js {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            text-align: center;
+            margin: 0px;
+        }
+        #videojs {
+            width: 100%;
+            height: 100%;
+        }.streaming-dimensions{
+                    width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+
+
+
+
+<center id="myDIV">
+
+<a class="genzaitv" href="javascript:server1();">📺Link 1</a>
+<a class="genzaitv" href="javascript:server2();">📺Link 2</a>
+<a class="genzaitv" href="javascript:server3();">📺Link 3</a>
+
+
+
+</center>
+
+
+<div id="tivi">
+<iframe id="video-player"  allowfullscreen="allowfullscreen" allowtransparency="true" frameborder="0" height="100%" marginheight="0" marginwidth="0"  scrolling="no" src="https://yosintv.github.io/yosintv/crichd.html?yosintv=bbtsp1	" width="100%"></iframe>
+
+
+<script type="text/javascript">function server1(){document.getElementById("tivi").innerHTML=' <iframe allowfullscreen="allowfullscreen" allowtransparency="true" frameborder="0" height="562" marginheight="0" marginwidth="0" sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"  scrolling="no" src="https://player.akiwat.com/play.html?url=https://nvzoftzsvflivcf.vcdn.com.vn/vtv6/vtv6@mid.m3u8" width="100%" __idm_id__="352163841"></iframe>'}</script>  
+
+
+<script type="text/javascript">function server2(){document.getElementById("tivi").innerHTML=' <iframe allowfullscreen="allowfullscreen" allowtransparency="true" frameborder="0" height="562" marginheight="0" marginwidth="0" sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" scrolling="no" src="https://player.aomeila.cn/detail.html?mid=3718447&type=1&pid=7&isTips=0&isLogin=1&sbtcolor=" width="100%" __idm_id__="352163841"></iframe>'}</script>
+
+
+<script type="text/javascript">function server3(){document.getElementById("tivi").innerHTML=' <iframe allowfullscreen="allowfullscreen" allowtransparency="true" frameborder="0" height="562" marginheight="0" marginwidth="0" sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" scrolling="no" src="https://bongstreams.com/rntv.php" width="100%" __idm_id__="352163841"></iframe>'}</script>
+
   
- <a href=" https://yosintv.github.io/yosintv/crichd.html?yosintv=bbtsp3 " rel="noopener" target="search_iframe"> Live 1</a>
 
-
- <a href=" https://yosintv.github.io/yosintv/crichd.html?yosintv=bbtsp3  " rel="noopener" target="search_iframe"> Live 2</a>
-
-
- <a href=" https://yosintv.github.io/yosintv/daddy.html?yosintv=368 " rel="noopener" target="search_iframe"> Live 3</a>
-
-    
 </div>
 
-<iframe class="STingPlayerLite-iframe" allow="autoplay" allowfullscreen="" 
-class="video-iframe" src=" https://yosintv.github.io/yosintv/crichd.html?yosintv=supergs " frameborder="0" name="search_iframe" scrolling="no"></iframe>
 
-<!-- Multiplayer Code Ends-->
+<script type="text/javascript">
+      var blink = document.getElementById('blink');
+      setInterval(function() {
+        blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+      }, 500);
+    </script>
+
+<script type="text/javascript">
+      var blink2 = document.getElementById('blink2');
+      setInterval(function() {
+        blink2.style.opacity = (blink2.style.opacity == 0 ? 1 : 0);
+      }, 500);
+    </script>
+                  
+<script>
+// Add active class to the current button (highlight it)
+var headeractive = document.getElementById("myDIV");
+var btns = headeractive.getElementsByClassName("genzaitv");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("activebtn");
+  if (current.length > 0) { 
+    current[0].className = current[0].className.replace(" activebtn", "");
+  }
+  this.className += " activebtn";
+  });
+}
+</script>
 
 
-
-
-<style>/*<![CDATA[*/
-* { transition: all 0ms !important; }.ST-api_Post iframe { margin: 0 !important; } header,footer{ display: none !important; }#main,header,footer,.AdsSite,#HTML9,#HTML10,body,.ST-api_Post h1,.postTimestamp,.ST-PostsHome { background: #000 !important; } .STingPlayerLite { width: 100%; position: fixed; top: 5px; left: 0; right: 0; display: flex; z-index: 9;gap: 2px;margin: 0 auto; } .STingPlayerLite a  { text-align: center; background: #4742d0; font-size: 16px; width: 100%; position: relative; cursor: pointer; padding: 5px 5px 7px; border: 0; text-shadow: 0 1px 1px rgba(0,0,0,.3); box-shadow: 0 0 0 #d6d6d6; border-radius: 1px; height: 43px; overflow: hidden; flex: 1; box-sizing: border-box; font-weight: 600; display: flex; align-items: center; justify-content: center; color: #fff!important; } .STingPlayerLite a:hover { background: #9e1414; } .STingActive { display: block !important; } .STingPlayerLite-iframe { width: 100%; height: 100%; position: absolute; left: 0; right: 0; top: 0; bottom: 0; } button.GetCode, button.Reload { position: fixed; z-index: 100; padding: 2px 10px; background: #931800; color: #fff; border: 0; outline: 0; font-size: 16px; border-radius: 4px; cursor: pointer; } button.Reload { top: 55px; right: 6px; } button.GetCode { top: 55px; left: 6px!important; } .STingTitleShare { font-size: 18px; color: #fff; text-align: center; width: max-content; margin: 0 auto; background: #9318009c; padding: 2px 18px; border-radius: 6px; } .STing-Share { width: max-content; margin: 0 auto; display: block; background: #000000bf; position: absolute; top: 35%; left: 0; right: 0; border-radius: 8px; padding: 12px; display: none; z-index: 99999; } #STingCodeShare { margin-top: 13px; max-width: 96%; width: 600px; direction: ltr; overflow: auto; padding: 5px; background: rgba(255,255,255,.26); border: 0; height: 90px; color: #fff; font-size: 12px; border-radius: 8px; } .NameSTingOnLive { position: fixed; z-index: 9999999999; text-align: center; font-size: 25px; color: #fff; margin: 0 auto; padding: 5px 20px; border-radius: 4px; } @media screen and (max-width:680px){ button.GetCode,button.Reload{padding:2px 5px;font-size:16px} button.Reload { top: 45px; padding: 4px 12px !important; font-size: 12px; } button.GetCode { top: 45px; left: 7px!important; padding: 4px 12px !important; font-size: 12px !important; } .STing-Share { width: 80%;top: 45%; } .STingPlayerLite { width: 96%;gap: 5px; } .STingPlayerLite a { font-size: 14px; padding: 4px 8px 7px; border-radius: 2px; height: 30px; margin-top: 4px; } .STingPlayerLite-iframe { height: 100%; top: 0; } .NameSTingOnLive { position: fixed; z-index: 9999999999; bottom: 80px !important; left: 0 !important; text-align: center; font-size: 15px !important; color: #fff; margin: 0 auto; border-radius: 4px; right: 0; width: 88% !important; padding: 5px !important; }} .NoLive { background: #000; z-index: 1; position: absolute; left: 0; right: 0; height: 6%; } button.Close { display: block; border: 0; background: #931800; color: #fff; padding: 5px 10px; border-radius: 5px; font-size: 18px; }
-/*]]>*/</style>
-<script>/*<![CDATA[*/
-document.getElementById("STingCodeShare").innerHTML = 
-`<iframe src="${window.location.href}" frameborder="0" allowfullscreen="" allow="autoplay" scrolling="no" height="600" width="100%"></iframe>`
-const OpenSTingShareCode = document.getElementById("OpenSTingShareCode");
-const ShareSTiCode = document.getElementById("ShareSTiCode");
-const ShareSTiCodeE = document.getElementById("ShareSTiCodeE");
-ShareSTiCode.addEventListener("click" , ()=> {OpenSTingShareCode.classList.toggle("STingActive");}); 
-ShareSTiCodeE.addEventListener("click" , ()=> {OpenSTingShareCode.classList.toggle("STingActive");}); 
-/*]]>*/</script>
-
-
-  
-  
+<style>
+.genzaitv{background:#fff none repeat scroll 0 0;}.genzaitv{border-left-width:.75pt;}.genzaitv{border-bottom-width:.75pt;}.genzaitv{border-right-width:.75pt;}.genzaitv{border-top-width:.75pt;}.genzaitv{border-left-style:solid;}.genzaitv{border-bottom-style:solid;}.genzaitv{border-right-style:solid;}[class~=genzaitv]:hover{border-left-color:#fff;}.genzaitv{border-top-style:solid;}.genzaitv{border-left-color:#d0cbcb;}.genzaitv{border-bottom-color:#d0cbcb;}.genzaitv{border-right-color:#d0cbcb;}.genzaitv{border-top-color:#d0cbcb;}.genzaitv{border-image:none;}.genzaitv{border-radius:.25em;}.genzaitv{color:#086c9a;}.genzaitv{display:inline-block;}.genzaitv{font-style:normal;}.genzaitv{font-variant:normal;}.genzaitv{font-weight:bold;}.genzaitv{font-stretch:normal;}.genzaitv{font-size:.15625in;}[class~=genzaitv]:hover{border-bottom-color:#fff;}.genzaitv{line-height:normal;}.genzaitv{font-size-adjust:none;}.genzaitv{font-kerning:auto;}[class~=genzaitv]:hover{border-right-color:#fff;}.genzaitv{margin-left:.0625pc;}.genzaitv{margin-bottom:.0625pc;}[class~=genzaitv]:hover{border-top-color:#fff;}.genzaitv{margin-right:.0625pc;}.genzaitv{margin-top:.0625pc;}[class~=genzaitv]:hover{box-shadow:0 1px .1875pc rgba(300,56,56,.6);}[class~=genzaitv]:hover{color:darkred;}.genzaitv{min-width:60pt;}.genzaitv{padding-left:.108333333in;}.genzaitv{padding-bottom:.06in;}.genzaitv{padding-right:.108333333in;}.genzaitv{padding-top:.05in;}.genzaitv{text-align:center;}.genzaitv{text-decoration:none;}
+.activebtn, .genzaitv:hover {
+background-color: darkblue;
+color: white;
+}
+</style>
