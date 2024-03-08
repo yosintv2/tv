@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Free HLS Player Online - M3U8 Player Online</title>    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: 350px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <center><label for="urlInput">Enter Your M3U8/MP4 Links:</label></center>
+            <input type="text" id="urlInput" name="urlInput">
+            <center><button type="button" onclick="updatePlayer()">Play Now</button></center>
+        </form>
+        <iframe id="player" width="100%" height="315" src="https://yosintv.github.io/yosintv/jwplayer.html?url=" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function updatePlayer() {
+            var customID = document.getElementById("urlInput").value;
+            var playerIframe = document.getElementById("player");
+            var newUrl = `https://yosintv.github.io/yosintv/jwplayer.html?url=${customID}`;
+            playerIframe.src = newUrl;
+        }
+    </script>
+</body>
+</html>
