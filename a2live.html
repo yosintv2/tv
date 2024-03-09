@@ -1,4 +1,4 @@
-<title> A2 Player</title>
+<title> A3 Player</title>
 
 <style>
         #container {
@@ -19,6 +19,7 @@
           height: 100vh;
           margin: 0;
           padding: 0;
+          background: #240A34;
         }
         #container {
           position: absolute;
@@ -63,83 +64,70 @@
     </style>
 
 
-<style> 
-        div { 
-            position: relative; 
-        } 
- 
-        button { 
-            display: inline-block; 
-            color: white; 
-            border: none; 
-            border-radius: 4px; 
-            padding: 5px 20px; 
-            font-size: 16px; 
-            cursor: pointer; 
-            background-color: rgb(59 59 59 / 40%); /* Faint red color */ 
-            margin-bottom: 10px; 
-            margin: 5px;
-        } 
- 
-        button:hover { 
-            background-color: rgba(30, 144, 255, 0.6); /* Adjusted hover background color */ 
-        } 
- 
-        button:focus { 
-            outline: none; 
-        } 
- 
-        button:disabled { 
-            cursor: not-allowed; 
-            background-color: #555; 
-        } 
- 
-        .button-container { 
-            position: absolute; 
-            bottom: 0; 
-            left: 0; 
-            right: 0; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            background-color: ; 
-            flex-wrap: wrap; 
-            padding: 10px; 
-        } 
- 
-        @media (max-width: 480px) { 
-            iframe { 
-                width: 100%; 
-                height: 400px; 
-            } 
- 
-            button { 
-                font-size: 14px; 
-            } 
-        } 
-    </style> 
-</head> 
-<body> 
-    <div style="position: relative;"> 
-        <iframe id="video-player" width="100%" height="100%" src=" https://yosintv.github.io/yosintv/jwplayer.html?url=_____ " 
-        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen  "></iframe> 
 
-            
-        <div class="button-container"> 
+
+<center id="myDIV">
+
+<a class="genzaitv" href="javascript:server1();"> Link 1</a>
+<a class="genzaitv" href="javascript:server2();"> Link 2</a>
+<a class="genzaitv" href="javascript:server3();"> Link 3</a>
+
+
+
+</center>
+
+
+<div id="tivi">
+<iframe id="video-player"  allowfullscreen="allowfullscreen" allowtransparency="true" frameborder="0" height="95%" marginheight="0" marginwidth="0"  scrolling="no" src=" https://www.youtube.com/embed/peMKOYoOfDs " width="100%"></iframe>
+
         
-            <button onclick="changeQuality(this)" data-src=" https://yosintv.github.io/yosintv/crichd.html?yosintv=bbtsp1 "> Link 1</button> 
-                
-            <button onclick="changeQuality(this)" data-src=" https://yosintv.github.io/yosintv/crichd.html?yosintv=willowusa "> Link 2</button> 
-                
-            <button onclick="changeQuality(this)" data-src=" https://yosintv.github.io/yosintv/crichd.html?yosintv=spch33 "> Link 3</button> 
-        </div> 
-    </div> 
- 
-    <script> 
-        function changeQuality(button) { 
-            var player = document.getElementById("video-player"); 
-            var src = button.getAttribute("data-src"); 
-            player.src = src; 
-            button.disabled = false; 
-        } 
-    </script> 
+<script type="text/javascript">function server1(){document.getElementById("tivi").innerHTML=' <iframe allowfullscreen="allowfullscreen" allowtransparency="true" frameborder="0" height="95%" marginheight="0" marginwidth="0" scrolling="no" src=" https://yosintv.github.io/yosintv/crichd.html?yosintv=bbtsp1 " width="100%" __idm_id__="352163841"></iframe>'}</script>  
+
+
+<script type="text/javascript">function server2(){document.getElementById("tivi").innerHTML=' <iframe allowfullscreen="allowfullscreen" allowtransparency="true" frameborder="0" height="95%" marginheight="0" marginwidth="0" scrolling="no" src=" https://yosintv.github.io/yosintv/crichd.html?yosintv=bbtsp1 " width="100%" __idm_id__="352163841"></iframe>'}</script>
+
+
+<script type="text/javascript">function server3(){document.getElementById("tivi").innerHTML=' <iframe allowfullscreen="allowfullscreen" allowtransparency="true" frameborder="0" height="95%" marginheight="0" marginwidth="0" scrolling="no" src=" https://yosintv.github.io/yosintv/crichd.html?yosintv=bbtsp1" width="100%" __idm_id__="352163841"></iframe>'}</script>
+
+  
+
+</div>
+
+
+<script type="text/javascript">
+      var blink = document.getElementById('blink');
+      setInterval(function() {
+        blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+      }, 500);
+    </script>
+
+<script type="text/javascript">
+      var blink2 = document.getElementById('blink2');
+      setInterval(function() {
+        blink2.style.opacity = (blink2.style.opacity == 0 ? 1 : 0);
+      }, 500);
+    </script>
+                  
+<script>
+// Add active class to the current button (highlight it)
+var headeractive = document.getElementById("myDIV");
+var btns = headeractive.getElementsByClassName("genzaitv");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("activebtn");
+  if (current.length > 0) { 
+    current[0].className = current[0].className.replace(" activebtn", "");
+  }
+  this.className += " activebtn";
+  });
+}
+</script>
+
+
+<style>
+.genzaitv{background:#fff none repeat scroll 0 0;}.genzaitv{border-left-width:.75pt;}.genzaitv{border-bottom-width:.75pt;}.genzaitv{border-right-width:.75pt;}.genzaitv{border-top-width:.75pt;}.genzaitv{border-left-style:solid;}.genzaitv{border-bottom-style:solid;}.genzaitv{border-right-style:solid;}[class~=genzaitv]:hover{border-left-color:#fff;}.genzaitv{border-top-style:solid;}.genzaitv{border-left-color:#d0cbcb;}.genzaitv{border-bottom-color:#d0cbcb;}.genzaitv{border-right-color:#d0cbcb;}.genzaitv{border-top-color:#d0cbcb;}.genzaitv{border-image:none;}.genzaitv{border-radius:.25em;}.genzaitv{color:#086c9a;}.genzaitv{display:inline-block;}.genzaitv{font-style:normal;}.genzaitv{font-variant:normal;}.genzaitv{font-weight:bold;}.genzaitv{font-stretch:normal;}.genzaitv{font-size:.15625in;}[class~=genzaitv]:hover{border-bottom-color:#fff;}.genzaitv{line-height:normal;}.genzaitv{font-size-adjust:none;}.genzaitv{font-kerning:auto;}[class~=genzaitv]:hover{border-right-color:#fff;}.genzaitv{margin-left:.0625pc;}.genzaitv{margin-bottom:.0625pc;}[class~=genzaitv]:hover{border-top-color:#fff;}.genzaitv{margin-right:.0625pc;}.genzaitv{margin-top:.0625pc;}[class~=genzaitv]:hover{box-shadow:0 1px .1875pc rgba(300,56,56,.6);}[class~=genzaitv]:hover{color:darkred;}.genzaitv{min-width:60pt;}.genzaitv{padding-left:.108333333in;}.genzaitv{padding-bottom:.06in;}.genzaitv{padding-right:.108333333in;}.genzaitv{padding-top:.05in;}.genzaitv{text-align:center;}.genzaitv{text-decoration:none;}
+.activebtn, .genzaitv:hover {
+background-color: darkblue;
+color: white;
+}
+</style>
