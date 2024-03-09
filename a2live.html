@@ -10,7 +10,7 @@
           color: #fff;
           overflow: hidden;
         }
-        #video-playe, #jwPlayer {
+        #streamBox, #jwPlayer {
           height: 100vh !important;
           padding: 0;
           margin: 0;
@@ -65,7 +65,63 @@
 
 
 
+<style>
+.btn:hover,.btn:focus,.btn:active,.btn:active:focus,
+.btn:active:hover{background-color:#510366!important;}
+.btn:active{box-shadow:none!important;transform:translateY(1px)!important;transition:all .15s ease}
+.btn:not([data-action]):hover{box-shadow:2px 2px 6px rgba(0,0,0,.4);transform:translateY(-1px);
+-webkit-transform:translateY(-1px)}
+.btn:disabled,.btn:disabled:hover,
+.btn:disabled:focus,
+.btn:disabled:active{background-color:#344675;border-color:#344675}
+.btn:hover,.btn:focus{opacity:1;filter:alpha(opacity=100);outline:0!important}
+.btn:active{box-shadow:none;outline:0!important}
+.btn-sm{font-size:.875rem;border-radius:3px;padding:5px 15px}
+#stream{border-radius:5px 5px 0 0;text-align:center;height:600px;width:100%}
+.server-name {
+	margin: 0 -3px 5px;
+	display: flex !important;
+	justify-content: space-between !important;
+	padding: 0;
+}
+ .server-name li{width:100%;margin:0 3px;font-size:15px;margin: 4px 2px;}
+@media screen and (max-width:640px){#stream{width:100%;height:330px}
+  
+.server-name{width:100%;height:100%;direction:rtl;text-align:center;overflow:auto;overflow-y:auto;overflow-y:auto;overflow-y:hidden;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;margin:0 auto}
+  
+.server-name li{display:inline-block;vertical-align:middle;background-image:none;white-space:nowrap;-moz-user-select:none;cursor:pointer;position:relative;margin:0 3px 0}}
+@media screen and (max-width:480px){#stream{width:100%;height:260px}}
+    
+.kasintvEmbed{background:#000;padding:5px;overflow:hidden;max-width:100%;margin:0 auto}
+.server-name .btn.active{background:#a0002a!important}
+.server-name li:nth-child(3) .btn.active,.server-name li:nth-child(4) .btn.active{background:#0035b3!important}
+#controls{margin-bottom:0}
+    
+.btn{border:none;position:relative;overflow:hidden;background-size:210% 210%;background-position:top right;background-color:#cb0441;box-shadow:none;color:#fff !important;font-weight:600;padding:10px 15px;line-height:1.35em;border-radius:.20rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;text-align:center;user-select:none;cursor:pointer;display:block; }
+.btn:hover{color:#020203;text-decoration:none}
+    
+</style>
 
+
+
+
+<div class="kasintvEmbed">
+   <ul class="server-name" id="server-btn">
+     <li><a class="btn" href="https://pc.sandipsitaula2023.com.np/M3U8%20Player/KaSinTV.html?kasintv=https://prod-ent-live-gm.jiocinema.com/hls/live/2100323/hd_akamai_androidmob_avc_hin_indvseng_test05day03090324/master.m3u8" target="search_iframe">📺Hindi</a></li>
+    <li><a class="btn" href="https://pc.sandipsitaula2023.com.np/M3U8%20Player/KaSinTV.html?kasintv=https://prod-ent-live-gm.jiocinema.com/hls/live/2100297/hd_akamai_iosmob_avc_eng_indvseng_test05day03090324/master.m3u8" target="search_iframe">📺Link 2</a></li>
+    
+    
+</ul>
+  
+   <div id="streamBox">
+   <iframe allowfullscreen="true" class="video" frameborder="no" height="600" id="stream" name="search_iframe" scrolling="yes" src="https://pc.sandipsitaula2023.com.np/M3U8%20Player/KaSinTV.html?kasintv=https://prod-ent-live-gm.jiocinema.com/hls/live/2100297/hd_akamai_iosmob_avc_eng_indvseng_test05day03090324/master.m3u8
+"></iframe>
+   
+</div>
+
+
+
+  <!--      
 <center id="myDIV">
 
 <a class="genzaitv" href="javascript:server1();"> Link 1</a>
@@ -131,3 +187,4 @@ background-color: darkblue;
 color: white;
 }
 </style>
+-->
