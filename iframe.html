@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IFrame Player</title>
+</head>
+<body>
+    <div id="player"></div>
+
+    <script>
+        // Function to get URL parameter
+        function getUrlParameter(name) {
+            name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+
+        // Get the URL parameter 'url' which contains the iframe URL
+        var urlParam = getUrlParameter('url');
+
+        // Create an iframe element and set its src to the URL parameter value
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('src', urlParam);
+        iframe.setAttribute('width', '100%');
+        iframe.setAttribute('height', '500px');
+
+        // Append the iframe to the 'player' div
+        document.getElementById('player').appendChild(iframe);
+    </script>
+</body>
+</html>
