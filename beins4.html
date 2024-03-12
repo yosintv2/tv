@@ -1,0 +1,100 @@
+
+<script src="https://yosintv.github.io/yosintv/jwcdn.js"></script>
+<script> jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+</script>
+<div id="player"></div>
+<script>
+
+    var playerInstance = jwplayer("player");
+
+    playerInstance.setup({
+
+        playlist: [{
+            "sources": [
+                {
+                    "default": false,
+                    "type": "dash",
+                    "file": 'https://ais-s.ais-vidnt.com/ais/play/origin/live/eds/S0004/DASH/S0004.mpd',
+                    "drm": {
+                        "clearkey": { "keyId": "cb419fa5f5498e2c6cbc39363248ddd7", "key": "b5853b51f2060025a822e62973154556" }
+                    },
+                    "label": "0"
+                }
+            ]
+        }],
+        width: "100%",
+        height: "100%",
+        aspectratio: "16:9",
+        autostart: true,
+			 logo: {
+ 					 file: '',
+ 					 link: 'yosin-tv.net/',
+  						position: 'top-right'
+  					},
+			cast:{},
+			sharing: {}
+    });
+</script>
+
+
+  <style>
+        #player {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          background: #8a0000;
+          color: #fff;
+          overflow: hidden;
+        }
+        #iframe, #player {
+          height: 100vh !important;
+          padding: 0;
+          margin: 0;
+        }
+        body {
+          height: 100vh;
+          margin: 0;
+          padding: 0;
+        }
+        #container {
+          position: absolute;
+          text-align: center;
+        }
+        video {
+          outline: 0;
+        }
+        #text {
+          position: fixed;
+          border: 0;
+          left: 0;
+          width: 100%;
+          color: #fff;
+          bottom: 50px;
+          text-align: center;
+          font-family: tahoma;
+          font-size: 20px;
+          z-index: 9999;
+        }
+      </style>
+
+
+        
+
+    <style>
+        .video-js {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            text-align: center;
+            margin: 0px;
+        }
+        #videojs {
+            width: 100%;
+            height: 100%;
+        }.streaming-dimensions{
+                    width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
