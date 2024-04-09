@@ -1,100 +1,254 @@
-
-<script src="https://yosintv.github.io/yosintv/jwcdn.js"></script>
+<script src='//ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js'></script>
 <script> jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
 </script>
-<div id="player"></div>
-<script>
+<style type='text/css'>#st-1 {
+  font-family: "Helvetica Neue", Verdana, Helvetica, Arial, sans-serif;;
+  direction: ltr;
+  display: block;
+  opacity: 1;
+  text-align: center;
+  z-index: 94034;
+}
+#st-1.st-animated {
+  -moz-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in; -ms-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in; -o-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in; -webkit-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in; transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in;
+}
+#st-1.st-hidden {
+  opacity: 0;
+}
 
-    var playerInstance = jwplayer("player");
-
-    playerInstance.setup({
-
-        playlist: [{
-            "sources": [
-                {
-                    "default": false,
-                    "type": "dash",
-                    "file": 'https://linear114-ie-dash1-prd-ak.cdn.skycdp.com/016a/Content/DASH_003_sd/Live/channel(gcptntsport2)/manifest_sd.mpd',
-                    "drm": {
-                        "clearkey": { "keyId": "00097e84e48516bddc69ac1b75e23190", "key": "99e880e73769540def6d05e3b48bb838" }
-                    },
-                    "label": "0"
-                }
-            ]
-        }],
-        width: "100%",
-        height: "100%",
-        aspectratio: "16:9",
-        autostart: true,
-			 logo: {
- 					 file: '',
- 					 link: 'yosin-tv.net/',
-  						position: 'top-right'
-  					},
-			cast:{},
-			sharing: {}
-    });
-</script>
+#st-1.st-preview {
+  display: none!important;
+  opacity: 0!important;
+}
+#st-1.st-hide {
+  display: none;
+}
+#st-1 .st-btn {
+  -moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+  -moz-transition: opacity 0.2s ease-in, top 0.2s ease-in; -ms-transition: opacity 0.2s ease-in, top 0.2s ease-in; -o-transition: opacity 0.2s ease-in, top 0.2s ease-in; -webkit-transition: opacity 0.2s ease-in, top 0.2s ease-in; transition: opacity 0.2s ease-in, top 0.2s ease-in;
+  -moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  height: 32px;
+  line-height: 32px;
+  margin-right: 8px;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  top: 0;
+  vertical-align: top;
+  white-space: nowrap;
+}
+#st-1 .st-btn:last-child {
+  margin-right: 0;
+}
+#st-1 .st-btn > svg {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  top: 8px;
+  vertical-align: top;
+}
+#st-1 .st-btn > img {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  top: 8px;
+  vertical-align: top;
+}
+#st-1 .st-btn > span {
+  -moz-transition: all 0.2s ease-in; -ms-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in; transition: all 0.2s ease-in;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  min-width: 60px;
+  opacity: 1;
+  padding: 0 6px;
+  position: relative;
+  vertical-align: top;
+}
+#st-1.st-has-labels .st-btn {
+  min-width: 120px;
+}
+#st-1.st-has-labels .st-btn.st-remove-label {
+  min-width: 50px;
+}
+#st-1.st-has-labels .st-btn.st-remove-label > span {
+  display: none;
+}
+#st-1.st-has-labels .st-btn.st-hide-label > span {
+  display: none;
+}
+#st-1 .st-total {
+  color: #555;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 12px;
+  margin-right: 0;
+  max-width: 80px;
+  padding: 4px 8px;
+  text-align: center;
+}
+#st-1 .st-total.st-hidden {
+  display: none;
+}
+#st-1 .st-total > span {
+  font-size: 16px;
+  line-height: 17px;
+  display: block;
+  padding: 0;
+}
+#st-1 .st-total > span.st-shares {
+  font-size: 9px;
+  line-height: 9px;
+}
+#st-1.st-justified {
+  display: flex;
+  text-align: center;
+}
+#st-1.st-justified .st-btn {
+  -moz-flex: 1;
+-ms-flex: 1;
+-webkit-flex: 1;
+flex: 1;
+}#st-1 .st-btn:hover {
+  opacity: .8;
+  top: -4px;
+}#st-1 .st-btn[data-network='facebook'] {
+  background-color: #4267B2
+}
+#st-1 .st-btn[data-network='facebook'] img {
+  filter: 
+}
+#st-1 .st-btn[data-network='facebook'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='twitter'] {
+  background-color: #000000
+}
+#st-1 .st-btn[data-network='twitter'] img {
+  filter: 
+}
+#st-1 .st-btn[data-network='twitter'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='whatsapp'] {
+  background-color: #25d366
+}
+#st-1 .st-btn[data-network='whatsapp'] img {
+  filter: 
+}
+#st-1 .st-btn[data-network='whatsapp'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='telegram'] {
+  background-color: #0088cc
+}
+#st-1 .st-btn[data-network='telegram'] img {
+  filter: 
+}
+#st-1 .st-btn[data-network='telegram'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='reddit'] {
+  background-color: #ff4500
+}
+#st-1 .st-btn[data-network='reddit'] img {
+  filter: 
+}
+#st-1 .st-btn[data-network='reddit'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='copy'] {
+  background-color: #14682B
+}
+#st-1 .st-btn[data-network='copy'] img {
+  filter: 
+}
+#st-1 .st-btn[data-network='copy'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='sharethis'] {
+  background-color: #95D03A
+}
+#st-1 .st-btn[data-network='sharethis'] img {
+  filter: 
+}
+#st-1 .st-btn[data-network='sharethis'] > span {
+  color: #fff
+}#st-1 .st-btn[data-network='snapchat'] > span {
+  color: #333};
+}</style>
 
 
   <style>
-        #player {
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          height: 100%;
-          background: #8a0000;
-          color: #fff;
-          overflow: hidden;
-        }
-        #iframe, #player {
-          height: 100vh !important;
-          padding: 0;
-          margin: 0;
-        }
-        body {
-          height: 100vh;
-          margin: 0;
-          padding: 0;
-        }
-        #container {
-          position: absolute;
-          text-align: center;
-        }
-        video {
-          outline: 0;
-        }
-        #text {
-          position: fixed;
-          border: 0;
-          left: 0;
-          width: 100%;
-          color: #fff;
-          bottom: 50px;
-          text-align: center;
-          font-family: tahoma;
-          font-size: 20px;
-          z-index: 9999;
-        }
-      </style>
+    div a img {
+      visibility: hidden;
+    }
+  </style>
 
-
-        
-
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.2/shaka-player.ui.min.js' crossorigin='anonymous'></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.2/controls.min.css' crossorigin='anonymous' />
+  <script async src='/cdn-cgi/challenge-platform/h/g/scripts/invisible.js?cb=6ebfddfd6fa3499c'></script>
+</head>
+<body bgcolor='black' style='margin:0' oncontextmenu='return false' onkeydown='return false' onmousedown='return false'>
     <style>
-        .video-js {
-            width: 100%;
-            height: 100%;
-        }
-        body {
-            text-align: center;
-            margin: 0px;
-        }
-        #videojs {
-            width: 100%;
-            height: 100%;
-        }.streaming-dimensions{
-                    width: 100% !important;
-            height: 100% !important;
-        }
+      .video-fill video {
+        object-fit: fill cover;
+      }
     </style>
+    <script>
+      ! function(a, b, c, d, e, f) {
+        a.ddjskey = e;
+        a.ddoptions = f || null;
+        var m = b.createElement(c),
+          n = b.getElementsByTagName(c)[0];
+        m.async = 1, m.src = d, n.parentNode.insertBefore(m, n)
+      }(window, document, "script", "https://js.datadome.co/tags.js", "99B1C08278137CE22ADB60CE8DE020", {
+        "ajaxListenerPath": true
+      });
+    </script>
+    <div class="container video-fill" data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit:fill cover;'>
+      <video autoplay data-shaka-player id='video' poster="https://blogger.googleusercontent.com/img/a/AVvXsEgPW62n3GieGxmfl3dOKSs0p1sb9AelxUi7A967d8L82NQYq68_tsDsUdsNXbWhrgy6P7xXQ6nmRlXt0JuyTQDRw5j68jafa3ZhnR_v5q52g41PTk0HcVAlTfcF3G5xr6k5ABqLJ-FZ85vGkK0ip3K7pNEBDQd0DVXv5frMMX0GqRDAo-LrbqFq-djhwuc=s313" style='width:100%;height:100%;'>
+
+      </video>
+    </div>
+    <script>
+      async function init() {
+          const video = document.getElementById('video');
+          const ui = video['ui'];
+          const controls = ui.getControls();
+          const player = controls.getPlayer();
+          player.configure({
+                drm: {
+                  clearKeys: {
+      // 'key-id-in-hex': 'key-in-hex',
+                    "0005520dcd30036b77b924cc5363cad0": "ebc86cd5962affaa29593b75d73551ba",
+  
+        
+             
+    }
+  }
+});
+//player.configure({drm:{servers:{'com.widevine.alpha':'https://license.dstv.com/widevine/getLicense?CrmId=afl&AccountId=afl&ContentId=SH2&SessionId=D3C00F885C24B9C6&Ticket=C839A8D71AB94299'}}}); 
+window.player = player; 
+window.ui = ui; 
+player.addEventListener('error', onPlayerErrorEvent); 
+controls.addEventListener('error', onUIErrorEvent); 
+try{await player.load('https://linear006-ie-dash1-prd-ak.cdn.skycdp.com/016a/Content/DASH_003_720_30/Live/channel(tntsport2)/manifest_720.mpd'); 
+console.log('The video has now been loaded!');} catch (error) {onPlayerError(error);}} 
+function onPlayerErrorEvent(errorEvent) {onPlayerError(event.detail);} 
+function onPlayerError(error) {console.error('Error code', error.code, 'object', error);} 
+function onUIErrorEvent(errorEvent) {onPlayerError(event.detail);} 
+function initFailed(errorEvent) {console.error('Unable to load the UI library!');} 
+document.addEventListener('shaka-ui-loaded', init); 
+document.addEventListener('shaka-ui-load-failed', initFailed); 
+</script>
