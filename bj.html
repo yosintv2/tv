@@ -1,1 +1,73 @@
 
+
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0 , user-scalable=no">
+    <meta name="viewport" content="width=device-width" />
+    <!-- SEO-->
+    <meta name="author" content="T20HD Embed" />
+    <meta name="designer" content="T20 " />
+    <meta name="description" content="Watch Live Streaming T20. No signup required">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+     <link rel="stylesheet" href="/dist/wmlogo.css" />
+    <script src="https://kit.fontawesome.com/bf2610f0a2.js" crossorigin="anonymous"></script>
+    <!-- Halfmoon CSS -->
+    <link href="https://cdn.jsdelivr.net/gh/halfmoonui/halfmoon@1.0.4/css/halfmoon.min.css" rel="stylesheet" />
+    <title>T20HD - Watch Live T20 Free on T20HD </title>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=> {
+  const e = document.querySelector("video"),
+    n = e.getElementsByTagName("source")[0].src,
+    o = {};
+  if(Hls.isSupported()) {
+    var config = {
+      maxMaxBufferLength: 100,
+    };
+    const t = new Hls(config);
+    t.loadSource(n), t.on(Hls.Events.MANIFEST_PARSED, function(n, l) {
+      const s = t.levels.map(e => e.height);
+      o.quality = {
+        default: s[0],
+        options: s,
+        forced: !0,
+        onChange: e => (function(e) {
+          window.hls.levels.forEach((n, o) => {
+            n.height === e && (window.hls.currentLevel = o)
+          })
+        })(e)
+      };
+      new Plyr(e, o)
+    }), t.attachMedia(e), window.hls = t
+  } else {
+    new Plyr(e, o)
+  }
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://cdn.plyr.io/3.6.2/plyr.polyfilled.js"></script>
+</head>
+<body class="dark-mode with-custom-scrollbars with-custom-css-scrollbars">
+   
+<video id="player" controls preload="metadata" poster="https://blogger.googleusercontent.com/img/a/AVvXsEgPW62n3GieGxmfl3dOKSs0p1sb9AelxUi7A967d8L82NQYq68_tsDsUdsNXbWhrgy6P7xXQ6nmRlXt0JuyTQDRw5j68jafa3ZhnR_v5q52g41PTk0HcVAlTfcF3G5xr6k5ABqLJ-FZ85vGkK0ip3K7pNEBDQd0DVXv5frMMX0GqRDAo-LrbqFq-djhwuc=s313" class="plyr">
+<source src=" https://sports.lvyclv.com/live/m33181103/playlist.m3u8 " type="application/x-mpegURL"/>
+
+  
+</video>
+<script>      document.addEventListener('DOMContentLoaded', () => {          const player = Plyr.setup('.js-player');      });  </script>
+
+
+<script>      document.addEventListener('DOMContentLoaded', () => {          const player = Plyr.setup('.js-player');      });  </script>
+
+
+
+
+
+
+</body>
+</html>
