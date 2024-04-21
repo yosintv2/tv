@@ -52,9 +52,9 @@
         setTimeout(function () {
             document.getElementById('overlay').style.display = 'none';
             var urlParams = new URLSearchParams(window.location.search);
-            var newUrl = urlParams.get('newUrl');
+            var newUrl = urlParams.get('newurl');
             if (newUrl) {
-                document.getElementById('myIframe').src = newUrl;
+                document.getElementById('myIframe').src = newurl;
             }
         }, 5000);
 
