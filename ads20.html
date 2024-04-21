@@ -52,8 +52,8 @@
         setTimeout(function () {
             document.getElementById('overlay').style.display = 'none';
             var urlParams = new URLSearchParams(window.location.search);
-            var newUrl = urlParams.get('newurl');
-            if (newUrl) {
+            var newurl = urlParams.get('newurl');
+            if (newurl) {
                 document.getElementById('myIframe').src = newurl;
             }
         }, 5000);
