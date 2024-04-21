@@ -18,20 +18,40 @@
             height: 100vh;
             border: none;
         }
+
+        .overlay {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            display: none;
+            z-index: 9999;
+        }
     </style>
 </head>
 
 <body>
+    <div class="overlay" id="overlay">Please wait 5-6 seconds</div>
     <iframe id="myIframe" src="https://yosintv2.github.io/tv/ads.html"></iframe>
 
     <script>
+        document.getElementById('overlay').style.display = 'block';
         setTimeout(function () {
+            document.getElementById('overlay').style.display = 'none';
             var urlParams = new URLSearchParams(window.location.search);
-            var newUrl = urlParams.get('yosintv');
+            var newUrl = urlParams.get('url');
             if (newUrl) {
-                document.getElementById('myIframe').src = yosintv;
+                document.getElementById('myIframe').src = url;
             }
         }, 5000);
+
+        document.getElementById('myIframe').onload = function () {
+            document.getElementById('overlay').style.display = 'none';
+        };
     </script>
 </body>
 
