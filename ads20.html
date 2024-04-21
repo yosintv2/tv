@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YoSinTV Custom Player</title>
+    <title>Responsive Iframe Page</title>
     <style>
         body {
             margin: 0;
@@ -33,15 +33,21 @@
             font-size: 24px;
             z-index: 9999;
         }
+
+        .overlay-message {
+            text-align: center;
+            padding: 20px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="overlay" id="overlay">Please wait 5-6 seconds</div>
-    <iframe id="myIframe" src="https://www.profitablegatecpm.com/zz7y4bgpf?key=afa62717015a8535ff72fbaf01fde52a"></iframe>
+    <div class="overlay" id="overlay">
+        <div class="overlay-message">Please wait 5-6 seconds</div>
+    </div>
+    <iframe id="myIframe" src="https://yosintv2.github.io/tv/ads.html"></iframe>
 
-
-<script>
+    <script>
         document.getElementById('overlay').style.display = 'block';
         setTimeout(function () {
             document.getElementById('overlay').style.display = 'none';
@@ -56,8 +62,6 @@
             document.getElementById('overlay').style.display = 'none';
         }, 10000); // Hide the overlay after 5 seconds
     </script>
-
-    
 </body>
 
 </html>
