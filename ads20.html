@@ -43,9 +43,9 @@
         setTimeout(function () {
             document.getElementById('overlay').style.display = 'none';
             var urlParams = new URLSearchParams(window.location.search);
-            var newUrl = urlParams.get('url');
+            var newUrl = urlParams.get('newUrl');
             if (newUrl) {
-                document.getElementById('myIframe').src = url;
+                document.getElementById('myIframe').src = newUrl;
             }
         }, 5000);
 
