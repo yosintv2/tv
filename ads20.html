@@ -26,8 +26,12 @@
 
     <script>
         setTimeout(function () {
-            document.getElementById('myIframe').src = 'https://yosintv.github.io/yosintv/mid.html?yosintv=3925937';
-        }, 8000);
+            var urlParams = new URLSearchParams(window.location.search);
+            var newUrl = urlParams.get('newUrl');
+            if (newUrl) {
+                document.getElementById('myIframe').src = newUrl;
+            }
+        }, 5000);
     </script>
 </body>
 
