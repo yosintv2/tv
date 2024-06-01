@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sky Sports Mix</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
+  <style>
+    body {
+      margin: 0px;
+    }
+
+    .jwplayer {
+      position: absolute !important;
+    }
+
+    .jwplayer.jw-flag-aspect-mode {
+      min-height: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="jwplayerDiv"></div>
+  <script type="text/javascript">
+    function getQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        file: params.get('file') || "https://ch11-hls-live.akamaized.net/out/u/433127.mpd",
+        keyId: params.get('keyId') || "d12e4c9dc52f4cbab7ac9b2278317e47",
+        key: params.get('key') || "a7987e5b6ec42db68a25486e108ca9f2"
+      };
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const { file, keyId, key } = getQueryParams();
+
+      jwplayer("jwplayerDiv").setup({
+        file: file,
+        position: 'bottom',
+        autostart: true,
+        stretching: "",
+        width: "100%",
+        type: "dash",
+        drm: {
+          clearkey: {
+            keyId: keyId,
+            key: key
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
