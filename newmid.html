@@ -1,0 +1,93 @@
+
+<html lang="en">
+
+<head>
+
+<script type='text/javascript'>
+        document.oncontextmenu = function(){return false}
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/console-ban@4.1.0/dist/console-ban.min.js"></script>
+    <script>
+        // default options
+        ConsoleBan.init()
+        </script> 
+
+<script type="text/javascript" disable-devtool-auto src="//fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+
+</head>
+
+<body>
+<body oncontextmenu='return false' onkeydown='return false' oncopy='return false' oncut='return false' onpaste='return false'>
+
+<script src="//cdn.jsdelivr.net/npm/@clappr/player@0.4.0/dist/clappr.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/mux.js@5.6.7/dist/mux.min.js"></script>
+   <script src='//cdn.jsdelivr.net/npm/level-selector@latest/dist/level-selector.min.js'></script>
+   <script src='//cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js'></script>
+   <script src='//cdn.jsdelivr.net/npm/clappr-pip@latest/dist/clappr-pip.min.js'></script>
+   <script src='//cdn.jsdelivr.net/npm/clappr-playback-rate-plugin@latest/dist/clappr-playback-rate-plugin.min.js'></script>
+   <script src="//cdn.jsdelivr.net/npm/shaka-player@2.5.10/dist/shaka-player.compiled.min.js"></script>
+   <script src="//cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.external.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/cdnbye-shaka@latest"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+      
+  <script>
+    function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+  var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+  results = regex.exec(location.search);
+  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  var id = getParameterByName('id');
+
+   </script>
+
+   
+<div id="player"></div>
+
+
+
+   <script>
+ 
+    player = new Clappr.Player({
+      source:  "https://cors-proxy.elfsight.com/116.153.46.92/livetx-rtmp.dongqiudi.com/live/sd-1-"+(id)+".m3u8",
+      mimeType: "application/x-mpegURL",
+              poster: "https://blogger.googleusercontent.com/img/a/AVvXsEgPW62n3GieGxmfl3dOKSs0p1sb9AelxUi7A967d8L82NQYq68_tsDsUdsNXbWhrgy6P7xXQ6nmRlXt0JuyTQDRw5j68jafa3ZhnR_v5q52g41PTk0HcVAlTfcF3G5xr6k5ABqLJ-FZ85vGkK0ip3K7pNEBDQd0DVXv5frMMX0GqRDAo-LrbqFq-djhwuc=s313",
+
+      autoPlay: false, 
+      height: "100%",
+      width: "100%",
+      plugins: {"core": [LevelSelector]}, 
+      parentId: "#player"});
+    
+ </script>
+
+
+
+<a href="javascript:document.location.reload();" onclick="window.open('https://www.whatsapp.com/channel/0029Va5CwglCRs1jRlhkhF3x'); return false;" target="_blank">
+    <span style="position:absolute;z-index: 100; top:5px; left:5px; height:20px; width:100px; color:#ccc; border:2px solid #ccc;padding:1px 0;border-radius:2px; text-align:center">
+        <i class="fa fa-refresh"></i> Join US
+    </span>
+</a>
+
+    <div style='text-align:center;display:block;max-width:auto;height:auto;overflow:hidden;margin:auto'/>
+      </div>
+      </div>
+    <!--end: floating ads-->
+
+</body>
+</body>
+
+</html>
