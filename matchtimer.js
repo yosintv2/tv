@@ -1,6 +1,6 @@
 (function() {
     // The domains you want to allow
-    const allowedDomains = ["www.yosin-tv.net", "livee.singhyogendra.com.np", "www.yosintv.net", "yosintv9999.blogspot.com"];
+    const allowedDomains = [ "yosintv9999.blogspot.com"];
 
     // Get the current URL
     const currentUrl = window.location.hostname;
@@ -10,6 +10,6 @@
 
     // If the current URL is not allowed, redirect to the main allowed domain
     if (!isAllowed) {
-        window.location.href = `https://${allowedDomains[0]}`;
+        window.location.href = `https://livee.singhyogendra.com.np/`;
     }
 })();
