@@ -10,6 +10,6 @@
 
     // If the current URL is not allowed, redirect to the main allowed domain
     if (!isAllowed) {
-        window.location.href = `https://livee.singhyogendra.com.np/`;
+        window.location.href = `https://${allowedDomain}`;
     }
 })();
