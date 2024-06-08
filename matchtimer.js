@@ -1,6 +1,6 @@
 (function() {
     // The domains you want to allow
-    const allowedDomains = ["youtube.com", "example.com", "anotherdomain.com"];
+    const allowedDomains = ["yosintv9999.blogspot.com", "example.com", "anotherdomain.com"];
 
     // Get the current URL
     const currentUrl = window.location.hostname;
