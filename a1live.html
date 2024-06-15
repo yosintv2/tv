@@ -11,6 +11,27 @@
 <script src="//content.jwplatform.com/libraries/SAHhwvZq.js" type="text/javascript"></script>      
 <script> jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+    // Get the `src` parameter from the URL.
+    const urlParams = new URLSearchParams(window.location.search);
+    const srcParam = urlParams.get('src');
+    const videoUrl = urlParams.get('url');
+    
+    if (srcParam) {
+      // Show the iframe player
+      document.getElementById('iframe').src = srcParam;
+      document.getElementById('jwPlayer').style.display = 'none';
+    } else if (videoUrl) {
+      // Show the JW Player
+      jwplayer("jwPlayer").setup({
+        file: videoUrl,
+      });
+      document.getElementById('iframe').style.display = 'none';
+    }
+  </script> 
+
+    
     <style>
         body { margin: 0px; }
         .ViostreamIframe { overflow: hidden; padding-top: 56.25%; position: relative; }
