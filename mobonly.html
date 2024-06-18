@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +44,13 @@
             color: #ff4d4d;
         }
 
-        @media (max-width: 1300px) {
+        /* Default to hiding the alert container */
+        .alert-container {
+            display: none;
+        }
+
+        /* Show alert container on PC using a min-width media query */
+        @media (min-width: 1025px) {
             .alert-container {
                 display: block;
                 transform: scale(1);
