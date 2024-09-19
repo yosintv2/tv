@@ -1,0 +1,104 @@
+
+    .container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .post-share {
+      background-color: rgba(204, 203, 200, 0.7); /* Transparent white-gray */
+      padding: 20px;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 98%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+.foot-logo{ width: 162px; height: 35px; } #logo a img { width: 190px; } .left { float:none; } #super_rss_reader-2 h3{ font-size:15px; } .widget-header { width: 100%; max-width: 100%; } /* Remove right action button (Nepali Calendar) */ .widget-header-bottom-right { display: none; } 
+
+/* ######Match Blocks#######*/ .yosintv-container { width: 100%; } .yosintv-button { font-size: 18px; font-weight: 700; display: block; width: 100%; padding: 6px; margin: 1px 0; background-color:rgb(244, 17, 17); color: #fff; text-align: center; text-decoration: none; /* Remove default underline for anchor elements */ border: none; border-radius: 4px; box-sizing: border-box; /* Include padding and border in the element's total width */ } /* 
+
+
+######Match Blocks#######*/ 
+.blink { animation: blink-animation 1s steps(2, start) infinite; } @keyframes blink-animation { to { visibility: hidden; } } .countdown span { background-color: black; color: black; padding: 1px 2px; border-radius: 0px; margin: 0 1px; font-size: 11px; } .event-live { font-weight: bold; color: red; } .event:hover { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); } .event { display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; margin: 10px 0; padding: 10px; border: 2px solid #000; border-radius: 5px; cursor: pointer; } .event-name { flex: 2; text-align: left; color: black; font-weight: bold; } .event-countdown { flex: 1; text-align: right; color: black; } 
+
+/* ######Match Infos#######*/ 
+table { width: 100%; border-collapse: collapse; margin-bottom: 20px; } th, td { border: 1px solid #ddd; padding: 8px; text-align: left; } th { background-color: #f2f2f2; font-weight: bold; } 
+
+
+/* ######Link V2.0#######*/ 
+.livee { display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; margin: 5px 0; padding: 5px; border: 2px solid #000; /* Increased border thickness */ border-radius: 5px; cursor: pointer; transition: box-shadow 0.3s ease; background-color: red; /* Event box red background */ color: white; /* Text color white */ } .livee:hover { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); } .livee-name { flex: 2; text-align: center; color: white; font-weight: bold; /* Bold event name */ } 
+	
+	
+/* ######Button CSS#######*/ 
+input.MyButton { width: 200px; padding: 7px; cursor: pointer; font-weight: bold; font-size: 100%; background: #0a0647; color: #fff; border: 1px solid #0a0647; border-radius: 10px; } input.MyButton:hover { color: #ff0000; background: #000; border: 1px solid #fff; }
+	
+    .container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .post-share {
+      background-color: rgba(204, 203, 200, 0.7); /* Transparent white-gray */
+      padding: 7px;
+      border-radius: 3px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 98%;
+      box-sizing: border-box;
+    }
+    .post-share b, .post-share i {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+    .post-share .content {
+      text-align: left;
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .post-share .content li {
+      margin-bottom: 10px;
+    }
+	
+	
+
+
+  .full-width-button {
+    display: block; /* Makes the button behave like a block element */
+    width: 100%; /* Full width */
+    background-color: #f00; /* Red background */
+    color: #fff; /* White text */
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: -15px; /* Adds space between buttons */
+
+  }
+
+  .full-width-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .full-width-button {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .full-width-button {
+      font-size: 14px;
+    }
+  }
