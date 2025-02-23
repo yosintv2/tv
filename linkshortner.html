@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortener</title>
+    <!-- Style CSS -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
+
         body {
             display: flex;
             justify-content: center;
@@ -20,6 +23,7 @@
             background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
             padding: 20px;
         }
+
         .main {
             text-align: center;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -29,21 +33,25 @@
             width: 100%;
             max-width: 500px;
         }
+
         .main h1 {
             font-size: 28px;
             margin-bottom: 10px;
         }
+
         .main p {
             font-size: 14px;
             color: #555;
             margin-bottom: 20px;
         }
+
         .url-input {
             display: flex;
             flex-direction: column;
             gap: 10px;
             margin-bottom: 20px;
         }
+
         .url-input input {
             width: 100%;
             padding: 10px;
@@ -52,9 +60,11 @@
             outline: none;
             font-size: 16px;
         }
+
         .url-input input:focus {
             border-color: #3aa5e7;
         }
+
         .url-input button {
             padding: 10px;
             border: none;
@@ -65,31 +75,24 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         .url-input button:hover {
             background-color: #065485;
         }
-        #note {
-            margin-top: 20px;
-        }
-        #note input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            outline: none;
-            font-size: 16px;
-        }
+
         #result {
             display: none;
             flex-direction: column;
             gap: 10px;
             margin-top: 20px;
         }
+
         #result a {
             color: #3aa5e7;
             text-decoration: none;
             word-break: break-all;
         }
+
         #result button {
             padding: 8px;
             border: none;
@@ -99,21 +102,26 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         #result button:hover {
             background-color: #065485;
         }
+
         #history {
             margin-top: 30px;
             text-align: left;
         }
+
         #history h2 {
             font-size: 20px;
             margin-bottom: 10px;
         }
+
         #history ul {
             list-style: none;
             padding: 0;
         }
+
         #history li {
             padding: 10px;
             border-bottom: 1px solid #ddd;
@@ -121,14 +129,17 @@
             flex-direction: column;
             gap: 5px;
         }
+
         #history li:last-child {
             border-bottom: none;
         }
+
         #history a {
             color: #3aa5e7;
             text-decoration: none;
             word-break: break-all;
         }
+
         #history button {
             padding: 5px 10px;
             border: none;
@@ -138,40 +149,56 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         #history button:hover {
             background-color: #065485;
+        }
+
+        @media (max-width: 600px) {
+            .main {
+                padding: 20px;
+            }
+
+            .main h1 {
+                font-size: 24px;
+            }
+
+            .url-input input, .url-input button {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="main">
-        <h1>URL Shortener</h1>
-        <p>Your go-to solution for instantly shortening long, cumbersome URLs into sleek and shareable links!</p>
+        <div id="container">
+            <h1>URL Shortener</h1>
+            <p>Your go-to solution for instantly shortening long, cumbersome URLs into sleek and shareable links!</p>
 
-        <div id="note">
-            <input type="text" id="noteInput" placeholder="Add a note...">
-        </div>
+            <div class="url-input">
+                <input type="url" id="urlInput" placeholder="Enter URL">
+                <textarea id="noteInput" placeholder="Add a custom note for this link..."></textarea>
+                <button onclick="shortenURL()" id="shortenBtn">Shorten</button>
+            </div>
 
-        <div class="url-input">
-            <input type="url" id="urlInput" placeholder="Enter URL">
-            <button onclick="shortenURL()">Shorten</button>
-        </div>
+            <div id="result">
+                <p>Shortened URL:</p>
+                <a href="" target="_blank" id="shortenedURL"></a>
+                <button onclick="copyToClipboard()">Copy</button>
+            </div>
 
-        <div id="result">
-            <p>Shortened URL:</p>
-            <a href="" target="_blank" id="shortenedURL"></a>
-            <button onclick="copyToClipboard()">Copy</button>
-        </div>
-
-        <div id="history">
-            <h2>Requested Links</h2>
-            <ul id="historyList"></ul>
+            <div id="history">
+                <h2>Requested Links</h2>
+                <ul id="historyList"></ul>
+            </div>
         </div>
     </div>
 
+    <!-- Script JS -->
     <script>
         let history = JSON.parse(localStorage.getItem('urlHistory')) || [];
 
+        // Load history when the page loads
         window.onload = () => {
             updateHistory();
         };
@@ -185,16 +212,55 @@
                 return;
             }
 
-            const response = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(urlInput)}`);
-            const shortenedURL = await response.text();
+            try {
+                const response = await fetch('https://tinyurl.com/api-create.php?url=' + encodeURIComponent(urlInput));
+                const shortenedURL = await response.text();
 
-            document.getElementById("shortenedURL").innerHTML = shortenedURL;
-            document.getElementById("shortenedURL").href = shortenedURL;
-            document.getElementById("result").style.display = "flex";
+                // Display the result
+                document.getElementById("shortenedURL").innerHTML = shortenedURL;
+                document.getElementById("shortenedURL").href = shortenedURL;
+                document.getElementById("result").style.display = "flex";
 
-            history.unshift({ note: noteInput, original: urlInput, shortened: shortenedURL });
-            localStorage.setItem('urlHistory', JSON.stringify(history));
-            updateHistory();
+                // Add to history with note
+                history.unshift({ original: urlInput, shortened: shortenedURL, note: noteInput });
+                localStorage.setItem('urlHistory', JSON.stringify(history)); // Save to localStorage
+                updateHistory();
+
+                // Clear inputs
+                document.getElementById("urlInput").value = "";
+                document.getElementById("noteInput").value = "";
+
+            } catch (error) {
+                console.error('Error shortening URL:', error);
+                alert("Failed to shorten the URL. Please try again.");
+            }
+        }
+
+        function copyToClipboard() {
+            const copyText = document.getElementById("shortenedURL").href;
+            navigator.clipboard.writeText(copyText).then(() => {
+                alert("Copied to clipboard!");
+            });
+        }
+
+        function updateHistory() {
+            const historyList = document.getElementById("historyList");
+            historyList.innerHTML = history.map((item, index) => `
+                <li>
+                    <div>
+                        <strong>Shortened:</strong> <a href="${item.shortened}" target="_blank">${item.shortened}</a><br>
+                        <strong>Original:</strong> <a href="${item.original}" target="_blank">${item.original}</a><br>
+                        <strong>Note:</strong> ${item.note || "No note added."}
+                    </div>
+                    <button onclick="copyToClipboardFromHistory('${item.shortened}')">Copy</button>
+                </li>
+            `).join("");
+        }
+
+        function copyToClipboardFromHistory(url) {
+            navigator.clipboard.writeText(url).then(() => {
+                alert("Copied to clipboard!");
+            });
         }
     </script>
 </body>
