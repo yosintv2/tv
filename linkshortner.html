@@ -249,9 +249,9 @@
                 <li>
                     <div>
                     
-                        <strong>Note:</strong> ${item.note || "No note added."}
                         <strong>Shortened:</strong> <a href="${item.shortened}" target="_blank">${item.shortened}</a><br>
                         <strong>Original:</strong> <a href="${item.original}" target="_blank">${item.original}</a><br>
+                        <strong>Note:</strong> ${item.note || "No note added."}
                     </div>
                     <button onclick="copyToClipboardFromHistory('${item.shortened}')">Copy</button>
                 </li>
